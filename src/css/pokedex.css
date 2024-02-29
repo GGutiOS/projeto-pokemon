@@ -1,6 +1,6 @@
 /* Estilos CSS para a div dos detalhes do Pokémon */
 #detalhesPokemon {
-    background-color: #ff0000; /* Vermelho */
+    background-color: #ff0000;
     border: 2px solid #000000;
     border-radius: 10px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
@@ -8,8 +8,8 @@
     max-width: 90%;
     margin: auto;
     padding: 20px;
-    text-align: center; /* Centraliza o conteúdo */
-    color: #ffffff; /* Branco */
+    text-align: center;
+    color: #ffffff; 
     margin-bottom: 20px;
 }
 
