@@ -4,6 +4,9 @@ body {
     margin: 0 auto;
     background-color: #5e5b5bad;
     color: #333333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 body.modo-escuro {
@@ -12,10 +15,11 @@ body.modo-escuro {
 }
 
 header {
-
     display: flex;
     justify-content: space-between;
     padding: 25px;
+    width: 100%;
+    max-width: 1280px;
 }
 
 header .logo,
@@ -30,108 +34,127 @@ header #botao-alterar-tema {
 }
 
 header .logo:hover,
-header .imagem-botao:hover,
-main .cartao-pokemon:hover {
+header .imagem-botao:hover {
     transform: scale(1.05);
-    /*muda o tamanho do cartao*/
     cursor: pointer;
 }
 
 main {
-
     padding: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-main .listagem-pokemon {
+.botoes-geracao {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.botao-geracao {
+    padding: 8px 16px;
+    font-size: 16px;
+    background-color: #ffcc00;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.botao-geracao:hover {
+    background-color: #ffb300;
+}
+
+.lista-pokemon {
     display: flex;
     flex-wrap: wrap;
-    /*coloca todos os itens da lista um do lado do outro*/
     gap: 30px;
-    /*cria espaçamento entre os cartoes */
     justify-content: center;
-    /*centraliza todo mundo */
 }
 
-main .cartao-pokemon {
+.geracao {
+    display: none;
+}
+
+.modo-escuro .pokemon-card {
+    background-color: #a8a8a8;
+}
+
+.pokemon-card {
     background-color: #d8e3ec;
     width: 200px;
     padding: 15px;
     display: flex;
-    /*centraliza os itens tambem dentro do cartao*/
     flex-direction: column;
-    /*coloca eles em coluna */
     align-items: center;
-    /*alinhar os itens no centro*/
     gap: 15px;
     border-radius: 15px;
     transition: 0.2s ease-in-out;
-    /*quando entrar e sair o hover ele vai fazer o efeito*/
+    cursor: pointer;
 }
 
-main .cartao-pokemon:hover {
+.pokemon-card:hover {
     background-color: #96d9d6;
-    
 }
 
-.modo-escuro .cartao-pokemon {
-    background-color: #a8a8a8;
-    /*deixa os cartoes cinza no modo escuro*/
-}
-
-main .cartao-pokemon .informacoes {
-    display: flex;
-    justify-content: space-between;
-    border: 1px solid #333333;
-    border-radius: 10px;
-}
-
-
-
-main .cartao-pokemon .informacoes span { /*estilizando os textos*/
-    padding: 5px;
-    text-transform: uppercase;
-    font-size: 17px;
-}
-
-main .cartao-pokemon .gif { /*padronizando os tamanhos das imagens*/
+.pokemon-image {
     width: 90px;
     height: 90px;
 }
 
-main .cartao-pokemon .tipos { /*estilizando a div dos tipos*/
-    display: flex;
-    gap: 15px;
+.pokemon-name {
+    text-align: center;
+    font-weight: bold;
 }
 
-main .cartao-pokemon .tipo { /*estilizando os tipos do cartao*/
-    padding: 8px;
-    border-radius: 10px;
+.pokemon-type {
+    text-align: center;
 }
 
-.grama {
-    background-color: #7ac74c; /*cores dos tipos */
+/* Estilos CSS para a seção de pesquisa de Pokémon */
+.pesquisa-pokemon {
+    background-color: #f3f3f3; /* Cor de fundo */
+    border: 2px solid #000000; /* Borda */
+    border-radius: 10px; /* Bordas arredondadas */
+    padding: 20px; /* Espaçamento interno */
+    margin-top: 20px; /* Espaçamento superior */
+    color: #333333; /* Cor do texto padrão */
 }
 
-.veneno {
-    background-color: #df67ddfb;
+.pesquisa-pokemon h2 {
+    font-size: 24px; /* Tamanho da fonte para o título */
+    margin-bottom: 10px; /* Espaçamento inferior */
 }
 
-.fogo{
-    background-color: #ee8130;
+.pesquisa-pokemon label {
+    font-weight: bold; /* Texto em negrito */
+    display: block; /* Cada label em uma nova linha */
+    margin-bottom: 5px; /* Espaçamento inferior */
 }
 
-.agua{
-    background-color: #6390f0;
+.pesquisa-pokemon input[type="number"] {
+    width: 100%; /* Largura total do input */
+    padding: 8px; /* Preenchimento interno */
+    border-radius: 5px; /* Bordas arredondadas */
+    border: 1px solid #000000; /* Borda */
 }
 
-.inseto {
-    background-color: #a6b91a;
+.pesquisa-pokemon button[type="submit"] {
+    background-color: #ffcc00; /* Cor de fundo do botão */
+    color: black; /* Cor do texto do botão */
+    padding: 10px 20px; /* Preenchimento interno do botão */
+    border: none; /* Sem borda */
+    border-radius: 5px; /* Bordas arredondadas */
+    cursor: pointer; /* Cursor de mouse */
+    font-size: 16px; /* Tamanho da fonte */
+    margin-top: 10px;
+    
 }
 
-main .descricao{ /*estilizando os textos descrição*/
-    max-height: 80px;
-    overflow-y: scroll; /* contem o conteudo que "transbordou"*/  
-    font-size: 14px;
-    padding-right: 10px;
+.pesquisa-pokemon button[type="submit"]:hover {
+    background-color: #ffb300; /* Cor de fundo do botão ao passar o mouse */
 }
+
+
 

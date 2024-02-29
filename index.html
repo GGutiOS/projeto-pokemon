@@ -14,193 +14,84 @@
     <link rel="stylesheet" href="./src/css/reset.css">
     <link rel="stylesheet" href="./src/css/estilos.css">
     <link rel="stylesheet" href="./src/css/scrollbar.css">
+    <link rel="stylesheet" href="./src/css/pokedex.css">
+    <link rel="stylesheet" href="./src/css/cards.css">
+    <link rel="stylesheet" href="./src/css/tipos.css">
+
+    <!-- Inclua o estilo para os cards de Pokémon -->
+    <link rel="stylesheet" href="./src/css/cards.css">
+
 </head>
 
 <body>
     <header>
         <a href="#">
-            <img src="./src/imagens/pokeball.png" alt=pokebola" class="logo">
+            <img src="./src/imagens/pokeball.png" alt="pokebola" class="logo">
         </a>
         <button id="botao-alterar-tema">
             <img src="./src/imagens/sun.png" alt="imagem do sol" class="imagem-botao">
         </button>
     </header>
     <main>
-        <ul class="listagem-pokemon">
-            <li class="cartao-pokemon">
-                <div class="informacoes">
-                    <span>Bubasaur</span>
-                    <span>#001</span>
-                </div>
+        <!-- Campo de pesquisa por número de Pokémon -->
+        <div class="pesquisa-pokemon" id="pesquisaPokemon">
+            <h2>Pesquisar Pokémon por Número</h2>
+            <form id="pokemonSearchForm">
+                <label for="pokemonNumber">Número do Pokémon:</label>
+                <input type="number" id="pokemonNumber" name="pokemonNumber" min="1" max="1080">
+                <button type="submit">Pesquisar</button>
+            </form>
+        </div>
 
-                <img src="./src/imagens/bulbasaur.gif" alt="Bulbasaur" class="gif">
+        <!-- Contêiner para exibir os detalhes do Pokémon pesquisado -->
+        <div id="detalhesPokemon">
+            <!-- Os detalhes do Pokémon pesquisado serão exibidos aqui -->
+        </div>
 
-                <ul class="tipos">
-                    <li class="tipo grama">Grama</li>
-                    <li class="tipo veneno">Veneno</li>
-                </ul>
+        <!-- Botões para filtrar por geração -->
+        <div class="botoes-geracao">
+            <button class="botao-geracao" data-geracao="1">1ª Geração</button>
+            <button class="botao-geracao" data-geracao="2">2ª Geração</button>
+            <button class="botao-geracao" data-geracao="3">3ª Geração</button>
+            <button class="botao-geracao" data-geracao="4">4ª Geração</button>
+            <button class="botao-geracao" data-geracao="5">5ª Geração</button>
+            <button class="botao-geracao" data-geracao="6">6ª Geração</button>
+            <button class="botao-geracao" data-geracao="7">7ª Geração</button>
+            <button class="botao-geracao" data-geracao="8">8ª Geração</button>
+        </div>
 
-                <p class="descricao">Há uma semente de planta
-                    em suas costas desde o dia que este Pokemon
-                    nasce. A semente cresce lentamente.</p>
-            </li>
-
-            <li class="cartao-pokemon">
-                <div class="informacoes">
-                    <span>Ivysaur</span>
-                    <span>#002</span>
-                </div>
-
-                <img src="./src/imagens/ivysaur.gif" alt="Ivysaur" class="gif">
-
-                <ul class="tipos">
-                    <li class="tipo grama">Grama</li>
-                    <li class="tipo veneno">Veneno</li>
-                </ul>
-
-                <p class="descricao">Quando o bulbo de suas costas cresce, parece perder a capacidade de ficar de pé em
-                    suas patas traseiras.</p>
-            </li>
-
-            <li class="cartao-pokemon">
-                <div class="informacoes">
-                    <span>Venossaur</span>
-                    <span>#003</span>
-                </div>
-
-                <img src="./src/imagens/venusaur.gif" alt="venusaur" class="gif">
-
-                <ul class="tipos">
-                    <li class="tipo grama">Grama</li>
-                    <li class="tipo veneno">Veneno</li>
-                </ul>
-
-                <p class="descricao">Sua planta floresce quando está absorvendo energia solar. Ele permanece em
-                    movimento para buscar a luz solar.</p>
-            </li>
-
-            <li class="cartao-pokemon">
-                <div class="informacoes">
-                    <span>Charmander</span>
-                    <span>#004</span>
-                </div>
-
-                <img src="./src/imagens/charmander.gif" alt="Charmander" class="gif">
-
-                <ul class="tipos">
-                    <li class="tipo fogo">Fogo</li>
-
-                </ul>
-
-                <p class="descricao">Tem uma natureza bárbara. Na batalha, ele chicoteia sua cauda ardente e corta com
-                    garras afiadas.</p>
-            </li>
-
-            <li class="cartao-pokemon">
-                <div class="informacoes">
-                    <span>Charmeleon</span>
-                    <span>#005</span>
-                </div>
-
-                <img src="./src/imagens/charmeleon.gif" alt="Charmeleon" class="gif">
-
-                <ul class="tipos">
-                    <li class="tipo fogo">Fogo</li>
-
-                </ul>
-
-                <p class="descricao">Ele cospe fogo que é quente o suficiente para derreter pedregulhos. Pode causar
-                    incêndios florestais soprando chamas.</p>
-            </li>
-
-            <li class="cartao-pokemon">
-                <div class="informacoes">
-                    <span>Charmander</span>
-                    <span>#006</span>
-                </div>
-
-                <img src="./src/imagens/charizard.gif" alt="Charizard" class="gif">
-
-                <ul class="tipos">
-                    <li class="tipo fogo">Fogo</li>
-
-                </ul>
-
-                <p class="descricao">Quando ele retrai seu longo pescoço em sua concha, ele esguicha água com força
-                    vigorosa.</p>
-            </li>
-
-            <li class="cartao-pokemon">
-                <div class="informacoes">
-                    <span>Squirtle</span>
-                    <span>#007</span>
-                </div>
-
-                <img src="./src/imagens/squirtle.gif" alt="Squirtle" class="gif">
-
-                <ul class="tipos">
-                    <li class="tipo agua">Agua</li>
-
-                </ul>
-
-                <p class="descricao">É reconhecido como um símbolo de longevidade. Se sua concha tem algas, esse
-                    Wartortle é muito antigo.</p>
-            </li>
-
-            <li class="cartao-pokemon">
-                <div class="informacoes">
-                    <span>Wartortle</span>
-                    <span>#008</span>
-                </div>
-
-                <img src="./src/imagens/wartortle.gif" alt="Wartortle" class="gif">
-
-                <ul class="tipos">
-                    <li class="tipo agua">Agua</li>
-
-                </ul>
-
-                <p class="descricao">Ele esmaga seu inimigo sob seu corpo pesado para causar desmaios. Em uma pitada,
-                    ele se retirará dentro de sua concha.</p>
-            </li>
-
-            <li class="cartao-pokemon">
-                <div class="informacoes">
-                    <span>Blastoise</span>
-                    <span>#009</span>
-                </div>
-
-                <img src="./src/imagens/blastoise.gif" alt="Blastoise" class="gif">
-
-                <ul class="tipos">
-                    <li class="tipo agua">Agua</li>
-
-                </ul>
-
-                <p class="descricao">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nam voluptas alias
-                    laboriosam aspernatur atque! Ex non placeat odit sit fuga. Pariatur rerum, accusamus accusantium quo
-                    neque earum. Odio, sint suscipit!</p>
-            </li>
-
-            <li class="cartao-pokemon">
-                <div class="informacoes">
-                    <span>Caterpie</span>
-                    <span>#010</span>
-                </div>
-
-                <img src="./src/imagens/caterpie.gif" alt="Caterpie" class="gif">
-
-                <ul class="tipos">
-                    <li class="tipo inseto">Inseto</li>
-
-                </ul>
-
-                <p class="descricao">Para proteção, ele libera um fedor horrível da antena em sua cabeça para afastar os
-                    inimigos.</p>
-            </li>
-        </ul>
+        <!-- Lista de Pokémon por geração -->
+        <div class="lista-pokemon">
+            <!-- Lista de Pokémon de cada geração será exibida aqui -->
+            <div class="geracao" id="geracao1">
+                <!-- Lista de Pokémon da 1ª geração -->
+            </div>
+            <div class="geracao" id="geracao2">
+                <!-- Lista de Pokémon da 2ª geração -->
+            </div>
+            <div class="geracao" id="geracao3">
+                <!-- Lista de Pokémon da 3ª geração -->
+            </div>
+            <div class="geracao" id="geracao4">
+                <!-- Lista de Pokémon da 4ª geração -->
+            </div>
+            <div class="geracao" id="geracao5">
+                <!-- Lista de Pokémon da 5ª geração -->
+            </div>
+            <div class="geracao" id="geracao6">
+                <!-- Lista de Pokémon da 6ª geração -->
+            </div>
+            <div class="geracao" id="geracao7">
+                <!-- Lista de Pokémon da 7ª geração -->
+            </div>
+            <div class="geracao" id="geracao8">
+                <!-- Lista de Pokémon da 8ª geração -->
+            </div>
+        </div>
     </main>
     <script src="./src/js/index.js"></script>
+    <script src="./src/js/geracao.js"></script>
+    <script src="./src/js/pokedex.js"></script>
 </body>
 
 </html>

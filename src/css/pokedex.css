@@ -1,0 +1,60 @@
+/* Estilos CSS para a div dos detalhes do Pokémon */
+#detalhesPokemon {
+    background-color: #ff0000; /* Vermelho */
+    border: 2px solid #000000;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    width: 300px; /* Largura da Pokédex */
+    max-width: 90%;
+    margin: auto;
+    padding: 20px;
+    text-align: center; /* Centraliza o conteúdo */
+    color: #ffffff; /* Branco */
+    margin-bottom: 20px;
+}
+
+#detalhesPokemon img {
+    max-width: 100%;
+    height: auto;
+    border: 2px solid #000000;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    background-color: wheat;
+}
+
+#detalhesPokemon .informacoes {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+#detalhesPokemon ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    margin-bottom: 10px;
+}
+
+#detalhesPokemon ul li {
+    margin-bottom: 5px;
+}
+
+#detalhesPokemon .descricao {
+    font-style: italic;
+}
+
+/* Estilos CSS para o campo de pesquisa */
+.pesquisa-pokemon {
+    text-align: center; /* Alinha o conteúdo ao centro */
+    margin-top: 50px; /* Espaço superior para afastar do cabeçalho */
+}
+
+.pesquisa-pokemon form {
+    display: inline-block; /* Permite centralizar o formulário */
+}
+
+/* Estilos CSS para o contêiner dos detalhes do Pokémon */
+#detalhesPokemon {
+    text-align: center; /* Alinha o conteúdo ao centro */
+    margin-top: 20px; /* Espaço superior */
+    display: none; /* Oculta inicialmente */
+}

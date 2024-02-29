@@ -1,0 +1,97 @@
+/* Estilos para os tipos de Pokémon */
+
+
+.tipo-normal {
+    background-color: #A8A878; /* Normal */
+}
+
+.tipo-fire {
+    background-color: #F08030; /* Fire */
+}
+
+.tipo-water {
+    background-color: #6890F0; /* Water */
+    color: #ffffff;
+}
+
+.tipo-electric {
+    background-color: #F8D030; /* Electric */
+}
+
+.tipo-grass {
+    background-color: #78C850; /* Grass */
+}
+
+.tipo-ice {
+    background-color: #98D8D8; /* Ice */
+}
+
+.tipo-fighting {
+    background-color: #C03028; /* Fighting */
+    color: #ffffff;
+}
+
+.tipo-poison {
+    background-color: #A040A0; /* Poison */
+    color:#ffffff ;
+}
+
+.tipo-ground {
+    background-color: #E0C068; /* Ground */
+}
+
+.tipo-flying {
+    background-color: #A890F0; /* Flying */
+}
+
+.tipo-psychic {
+    background-color: #F85888; /* Psychic */
+}
+
+.tipo-bug {
+    background-color: #A8B820; /* Bug */
+}
+
+.tipo-rock {
+    background-color: #B8A038; /* Rock */
+}
+
+.tipo-ghost {
+    background-color: #705898; /* Ghost */
+    color: #ffffff;
+}
+
+.tipo-dragon {
+    background-color: #7038F8; /* Dragon */
+    color: #ffffff;
+}
+
+.tipo-dark {
+    background-color: #705848; /* Dark */
+    color: #ffffff;
+}
+
+.tipo-steel {
+    background-color: #B8B8D0; /* Steel */
+}
+
+.tipo-fairy {
+    background-color: #EE99AC; /* Fairy */
+}
+
+/* Adiciona margem e borda aos tipos quando um Pokémon tem dois tipos diferentes */
+.pokemon-type.two-types {
+    margin-right: 5px; /* Adiciona uma margem à direita para separar os tipos */
+    border: 1px solid black; /* Adiciona uma borda */
+    padding: 2px; /* Adiciona um preenchimento dentro da borda */
+    display: flex;
+}
+
+.pokemon-type{
+    margin-right: 5px; /* Adiciona uma margem à direita para separar os tipos */
+    border: 1px solid black; /* Adiciona uma borda */
+    padding: 2px; /* Adiciona um preenchimento dentro da borda */
+    display: flex;
+    text-transform: capitalize;
+    font-weight: bold;
+}
