@@ -19,25 +19,56 @@ async function searchPokemon() {
     const div = document.createElement('div');
     div.className = 'detalhes-pokemon';
 
-    div.innerHTML = `
-        <div class="informacoes">
-            <span>${pokemonDetails.name}</span>
-            <span>#${pokemonDetails.id}</span>
-        </div>
+    // Adiciona botão para alternar entre imagens normal e Shiny
+    const btnShiny = document.createElement('button');
+    btnShiny.textContent = 'Alternar Shiny';
+    btnShiny.addEventListener('click', async () => {
+        if (pokemonDetails.sprites.front_shiny) {
+            img.src = pokemonDetails.sprites.front_shiny;
+        } else {
+            alert('Não há versão Shiny deste Pokémon.');
+        }
+    });
 
-        <img src="${pokemonDetails.sprites.front_default}" alt="${pokemonDetails.name}" class="gif">
+    // Cria e configura a imagem do Pokémon
+    const img = document.createElement('img');
+    img.src = pokemonDetails.sprites.front_default;
+    img.alt = pokemonDetails.name;
+    img.classList.add('pokemon-image');
 
-        <ul class="tipos">
-            ${types.split(', ').map(type => `<li class="tipo-${type.toLowerCase()}">${type}</li>`).join('')}
-        </ul>
+    // Cria e configura os detalhes do Pokémon
+    const nomePokemon = document.createElement('p');
+    nomePokemon.textContent = pokemonDetails.name;
+    nomePokemon.classList.add('pokemon-name');
 
-        <p class="peso">${weight}</p>
-        <p class="altura">${height}</p>
-        <p class="estatisticas">${stats}</p>
-    `;
+    const tiposPokemon = document.createElement('p');
+    tiposPokemon.textContent = `Tipos: ${types}`;
+    tiposPokemon.classList.add('pokemon-types');
+
+    const pesoPokemon = document.createElement('p');
+    pesoPokemon.textContent = weight;
+    pesoPokemon.classList.add('pokemon-weight');
+
+    const alturaPokemon = document.createElement('p');
+    alturaPokemon.textContent = height;
+    alturaPokemon.classList.add('pokemon-height');
+
+    const estatisticasPokemon = document.createElement('p');
+    estatisticasPokemon.innerHTML = stats;
+    estatisticasPokemon.classList.add('pokemon-stats');
+
+    // Adiciona os elementos ao contêiner de detalhes do Pokémon
+    div.appendChild(btnShiny);
+    div.appendChild(img);
+    div.appendChild(nomePokemon);
+    div.appendChild(tiposPokemon);
+    div.appendChild(pesoPokemon);
+    div.appendChild(alturaPokemon);
+    div.appendChild(estatisticasPokemon);
 
     detalhesPokemon.appendChild(div);
 }
+
 
 // Event listener para o formulário de pesquisa
 const pokemonSearchForm = document.getElementById('pokemonSearchForm');

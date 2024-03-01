@@ -46,6 +46,7 @@
 .pesquisa-pokemon {
     text-align: center; /* Alinha o conteúdo ao centro */
     margin-top: 50px; /* Espaço superior para afastar do cabeçalho */
+    margin-bottom: 20px;
 }
 
 .pesquisa-pokemon form {
