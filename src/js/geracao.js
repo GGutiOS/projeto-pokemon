@@ -13,6 +13,8 @@ const generacoes = {
 // Adicione um evento de clique para cada botão de geração
 document.addEventListener('DOMContentLoaded', () => {
     const botoesGeracao = document.querySelectorAll('.botao-geracao');
+    const spanGeracaoAtual = document.getElementById('geracaoAtual');
+
     botoesGeracao.forEach(botao => {
         botao.addEventListener('click', async () => {
             const geracao = botao.getAttribute('data-geracao');
@@ -29,9 +31,14 @@ document.addEventListener('DOMContentLoaded', () => {
                     lista.style.display = 'none';
                 }
             });
+
+            // Atualiza o span com a geração atual e mostra-o
+            spanGeracaoAtual.textContent = `Geração ${geracao}`;
+            spanGeracaoAtual.style.display = 'block';
         });
     });
 });
+
 
 // Função para buscar os Pokémon de uma geração específica na API pelo número do Pokémon
 async function fetchPokemonByGenerationNumbers(numbers) {
@@ -61,9 +68,6 @@ function displayPokemonByGeneration(pokemonList, geracao) {
         `;
     }
 }
-
-
-
 
 // Função para buscar detalhes de um Pokémon específico
 async function fetchPokemonDetails(url) {

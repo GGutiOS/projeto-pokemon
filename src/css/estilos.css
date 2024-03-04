@@ -156,5 +156,12 @@ main {
     background-color: #ffb300; /* Cor de fundo do botão ao passar o mouse */
 }
 
+.geracao-atual {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
 
 
