@@ -49,37 +49,16 @@ function displayPokemonByGeneration(pokemonList, geracao) {
     listaPokemonGeracao.innerHTML = ''; // Limpa a lista de Pokémon da geração anterior, se houver
 
     for (const pokemon of pokemonList) {
-        const li = document.createElement('li');
-        li.classList.add('pokemon-card'); // Adiciona a classe 'pokemon-card' ao elemento <li>
-
-        // Nome e ID do Pokémon
-        const nomeIdPokemon = document.createElement('p');
-        nomeIdPokemon.textContent = `${pokemon.name} - #${pokemon.id}`;
-        nomeIdPokemon.classList.add('pokemon-name-id');
-        li.appendChild(nomeIdPokemon);
-
-        // Imagem do Pokémon
-        const divImageContainer = document.createElement('div');
-        divImageContainer.classList.add('pokemon-image-container');
-        const img = document.createElement('img');
-        img.src = pokemon.sprites.front_default;
-        img.alt = pokemon.name;
-        img.classList.add('pokemon-image');
-        divImageContainer.appendChild(img);
-        li.appendChild(divImageContainer);
-
-        // Tipos do Pokémon
-        const tiposPokemon = document.createElement('div');
-        tiposPokemon.classList.add('pokemon-types');
-        pokemon.types.forEach(type => {
-            const tipoPokemon = document.createElement('span');
-            tipoPokemon.textContent = type.type.name;
-            tipoPokemon.classList.add('pokemon-type', `tipo-${type.type.name}`);
-            tiposPokemon.appendChild(tipoPokemon);
-        });
-        li.appendChild(tiposPokemon);
-        
-        listaPokemonGeracao.appendChild(li);
+        const tiposPokemon = pokemon.types.map(type => `<span class="pokemon-type tipo-${type.type.name}">${type.type.name}</span>`).join('');
+        listaPokemonGeracao.innerHTML += `
+            <li class="pokemon-card">
+                <p class="pokemon-name-id">${pokemon.name} - #${pokemon.id}</p>
+                <div class="pokemon-image-container">
+                    <img src="${pokemon.sprites.front_default}" alt="${pokemon.name}" class="pokemon-image">
+                </div>
+                <div class="pokemon-types">${tiposPokemon}</div>
+            </li>
+        `;
     }
 }
 
